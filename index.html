@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <br>
+    <header>
+        <center><h1>Selección de metodología</h1></center>
+    </header>
+    <br><br><br>
+    <div class="container">
+        <form action="#">
+            <div class="mb-3 row">
+                <label for="prediccion_agilidad" class="col-sm-3 col-form-label">1.&emsp;Predicción - Agilidad: </label>
+                <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="prediccion_agilidad">
+                        <option selected>Seleccione una opción</option>
+                        <option value="E">Constante</option>
+                        <option value="I">Flexible</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="prediccion_agilidad" class="col-sm-3 col-form-label">2.&emsp;Frecuencia de Flujos de Trabajo: </label>
+                <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="frecuencia_flujos">
+                        <option selected>Seleccione una opción</option>
+                        <option value="P">Por prioridad</option>
+                        <option value="C">Cíclicas</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="prediccion_agilidad" class="col-sm-3 col-form-label">3.&emsp;Definición de Prácticas: </label>
+                <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="definicion_practicas">
+                        <option selected>Seleccione una opción</option>
+                        <option value="E">Estable</option>
+                        <option value="I">Inestable</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="prediccion_agilidad" class="col-sm-3 col-form-label">4.&emsp;Roles y Tareas: </label>
+                <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="roles_tareas">
+                        <option selected>Seleccione una opción</option>
+                        <option value="E">Estable</option>
+                        <option value="I">Inestable</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="prediccion_agilidad" class="col-sm-3 col-form-label">5.&emsp;Definición de entregables/artefactos: </label>
+                <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="definicion_entregables">
+                        <option selected>Seleccione una opción</option>
+                        <option value="E">Estable</option>
+                        <option value="I">Inestable</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="prediccion_agilidad" class="col-sm-3 col-form-label">6.&emsp;Tamaño de proyecto: </label>
+                <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="tamaño_proyecto">
+                        <option selected>Seleccione una opción</option>
+                        <option value="E">Estable</option>
+                        <option value="I">Inestable</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="prediccion_agilidad" class="col-sm-3 col-form-label">7.&emsp;Comunicación entre integrantes: </label>
+                <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="comunicacion_integrantes">
+                        <option selected>Seleccione una opción</option>
+                        <option value="E">Estable</option>
+                        <option value="I">Inestable</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="prediccion_agilidad" class="col-sm-3 col-form-label">8.&emsp;Cambio de integrantes: </label>
+                <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="cambio_integrantes">
+                        <option selected>Seleccione una opción</option>
+                        <option value="E">Estable</option>
+                        <option value="I">Inestable</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="participacion_proyecto" class="col-sm-3 col-form-label">9.&emsp;Participación en el proyecto: </label>
+                <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="participacion_proyecto">
+                        <option selected>Seleccione una opción</option>
+                        <option value="P">Parcial</option>
+                        <option value="T">Total</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="prediccion_agilidad" class="col-sm-3 col-form-label">10.&emsp;Criticidad de proyectos: </label>
+                <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="criticidad_proyectos">
+                        <option selected>Seleccione una opción</option>
+                        <option value="E">Estable</option>
+                        <option value="I">Inestable</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="prediccion_agilidad" class="col-sm-3 col-form-label">11.&emsp;Manejo de contratos: </label>
+                <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="manejo_contratos">
+                        <option selected>Seleccione una opción</option>
+                        <option value="E">Estable</option>
+                        <option value="I">Inestable</option>
+                    </select>
+                </div>
+            </div>
+            <center><input type="submit" value="Calcular" class="btn btn-success" onclick="calcular();"></center>
+        </form>
+        <br><br><br>
+        <div id="grafico">
+            <center><canvas id="myChart" style="width:100%;max-width:600px"></canvas></center>
+        </div>
+        <br><br><br>
+    </div>
+    
+    
+</body>
+</html>
